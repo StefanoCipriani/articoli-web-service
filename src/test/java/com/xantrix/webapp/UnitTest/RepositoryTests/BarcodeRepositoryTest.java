@@ -1,17 +1,19 @@
 package com.xantrix.webapp.UnitTest.RepositoryTests;
 
 import static org.assertj.core.api.Assertions.assertThat;
- 
-import com.xantrix.webapp.Application;
-import com.xantrix.webapp.entities.Barcode;
-import com.xantrix.webapp.repository.BarcodeRepository;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.xantrix.webapp.Application;
+import com.xantrix.webapp.entities.Barcode;
+import com.xantrix.webapp.repository.BarcodeRepository;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = Application.class)
@@ -23,6 +25,7 @@ public class BarcodeRepositoryTest
 	
 	
 	@Test
+	@DirtiesContext
 	public void TestfindByBarcode()
 	{
 		assertThat(barcodeRepository.findByBarcode("8008490000021"))
