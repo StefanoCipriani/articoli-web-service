@@ -101,8 +101,9 @@ public class InsertArtTest
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(ErrJsonData)
 				.accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isBadRequest())
-				.andExpect(jsonPath("$.codice").value(400))
+				//.andExpect(status().isBadRequest())
+				.andExpect(status().isNotAcceptable())
+				.andExpect(jsonPath("$.codice").value(406))
 				//.andExpect(jsonPath("$.messaggio").value("Articolo 123Test presente in anagrafica! Impossibile utilizzare il metodo POST"))
 				.andDo(print());
 	}

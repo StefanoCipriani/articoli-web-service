@@ -50,23 +50,23 @@ private MockMvc mockMvc;
 			"    \"codStat\": \"\",\n" + 
 			"    \"pzCart\": 6,\n" + 
 			"    \"pesoNetto\": 1.5,\n" + 
-			"    \"idStatoArt\": \"1 \",\n" + 
+			"    \"idStatoArt\": \"1\",\n" + 
 			"    \"dataCreaz\": \"2010-06-14\",\n" + 
-			"    \"barcode\": [\n" + 
+			"    \"barcodes\": [\n" + 
 			"        {\n" + 
 			"            \"barcode\": \"8008490000021\",\n" + 
 			"            \"idTipoArt\": \"CP\"\n" + 
 			"        }\n" + 
 			"    ],\n" + 
 			"    \"famAssort\": {\n" + 
-			"        \"id\": 1,\n" + 
+			"        \"id\":\"1\",\n" + 
 			"        \"descrizione\": \"DROGHERIA ALIMENTARE\"\n" + 
 			"    },\n" + 
 			"    \"ingredienti\": null,\n" + 
 			"    \"iva\": {\n" + 
-			"        \"idIva\": 22,\n" + 
+			"        \"idIva\":\"22\",\n" + 
 			"        \"descrizione\": \"IVA RIVENDITA 22%\",\n" + 
-			"        \"aliquota\": 22\n" + 
+			"        \"aliquota\":\"22\"\n" + 
 			"    }\n" + 
 			"}";
 	
