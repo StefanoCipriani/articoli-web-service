@@ -28,7 +28,7 @@ public class ArticoliServiceImpl implements ArticoliService
 	}
 
 	@Override
-	//@Cacheable("SelByDescrizione")
+	@Cacheable("selByDescrizione")
 	public List<Articoli> selByDescrizione(String descrizione, Pageable pageable)
 	{
 		return articoliRepository.findByDescrizioneLike(descrizione, pageable);

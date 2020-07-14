@@ -33,6 +33,7 @@ import com.xantrix.webapp.service.ArticoliService;
 import com.xantrix.webapp.service.BarcodeService;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
@@ -61,7 +62,7 @@ public class ArticoliController {
 	{ @ApiResponse(code = 200, message = "Articolo Trovato"),
 	  @ApiResponse(code = 404, message = "Articolo Non Trovato")})
 	@RequestMapping(value = "/cerca/ean/{barcode}", method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<Articoli> listArtByEan(/*@ApiParam("Barcode univoco dell'articolo")*/ @PathVariable("barcode") String Barcode)
+	public ResponseEntity<Articoli> listArtByEan(@ApiParam("Barcode univoco dell'articolo") @PathVariable("barcode") String Barcode)
 			throws NotFoundException	 
 	{
 		logger.info("****** Otteniamo l'articolo con barcode " + Barcode + " *******");
